@@ -1,0 +1,291 @@
+
+.main{
+    position: relative;
+    overflow: hidden;
+    overflow-y: hidden;
+}
+.boxChat{
+width: 100%;
+height: auto;
+overflow: hidden;
+display: flex;
+justify-content: center;
+padding: 2rem;
+}
+.contentBox{
+    width: 100%;
+    height: 43rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    background-color: var(--color_white);
+    display: flex;
+    gap: 0 .5rem;
+    overflow: hidden;
+}
+.content_users{
+    min-width: 300px;
+    max-height: 43rem;
+    overflow-y: auto;
+    padding: .5rem;
+    border-right: 1px solid  rgba(226, 232, 240, 1);
+    transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -ms-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+}
+.title_content{
+    display: flex;
+    gap: 0 5rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(226, 232, 240, 1);
+    margin-bottom: 1rem;
+    position: relative;
+}
+.title_content svg {
+    width: 2rem;
+    height: 2rem ;
+    color: var(--color_gray);
+}
+.boxSearch_contentChat{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(226, 232, 240, 1);
+    background-color: var(--color_chat);
+    padding: .7rem 1rem;
+    border-radius: .3rem;
+    -webkit-border-radius: .3rem;
+    -moz-border-radius: .3rem;
+    -ms-border-radius: .3rem;
+    -o-border-radius: .3rem;
+    margin-bottom: 1rem;
+}
+.boxSearch_contentChat input {
+    width: 100%;outline: none;height: 100%;
+    border: none;background-color: transparent;
+}
+
+.boxContent_usersFor_chat{
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+}
+.box_userChat{
+    display: flex;
+    gap: 0 .7rem;
+    align-items: center;
+    padding: .5rem;
+    border-radius:.3rem;
+    -webkit-border-radius:.3rem;
+    -moz-border-radius:.3rem;
+    -ms-border-radius:.3rem;
+    -o-border-radius:.3rem;
+    margin-bottom: 1rem;
+}
+.box_userChat:hover{
+    background-color: var(--color_chat);
+    transition: all .4s ease-in;
+    -webkit-transition: all .4s ease-in;
+    -moz-transition: all .4s ease-in;
+    -ms-transition: all .4s ease-in;
+    -o-transition: all .4s ease-in;
+    cursor: pointer;
+}
+.image_user{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+.image_user img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius:100%;
+    -webkit-border-radius:100%;
+    -moz-border-radius:100%;
+    -ms-border-radius:100%;
+    -o-border-radius:100%;
+    background-position: center;
+}
+.title_userandName span{
+ font-weight: 700;
+}
+.title_userandName p {
+    font-size: small;
+    font-weight: 600;margin-top: .3rem;
+    color: var(--color_text);
+}
+/* left content user finish */
+
+.content_chats{
+    width: 100%;
+    position: relative;
+}
+.header_contentChat{
+    width: 100%;
+    padding:.9rem .5rem;
+    display: flex;justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(226, 232, 240, 1);
+}
+.left_headerContent{
+    display: flex;gap: 0 .7rem;
+    align-items: center;
+}
+.left_headerContent img {
+    width: 3.5rem;
+    height: 3.5rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+.left_headerContent h4 {
+    font-size: 1rem;
+}
+.left_headerContent p {
+    margin-top: .3rem;
+    color: var(--color_text);
+    font-weight: 600;
+}
+.right_headerContent svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+/* ------------------------------- box massage chat */
+
+.box_massiges{
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+    z-index: 100;
+    width: 100%;
+    display: flex;align-items: center;
+    padding: .5rem;
+    padding-top: 1.5rem;
+    background-color: var(--color_white);
+    gap: 0 .5rem;
+    border-top: 1px solid rgba(226, 232, 240, 1);
+}
+.box_inputMassiage {
+        display: flex;
+        width: 100%;
+        align-items: center;
+         padding: 0 .5rem;
+        height: 3rem;
+        gap: 0 .5rem;
+        border: 1px solid rgba(226, 232, 240, 1);
+        border-radius:.3rem;
+        -webkit-border-radius:.3rem;
+        -moz-border-radius:.3rem;
+        -ms-border-radius:.3rem;
+        -o-border-radius:.3rem;
+}
+.box_inputMassiage input {
+width: 100%;border: none;
+outline: none;
+}
+.box_inputMassiage input::placeholder{
+    color: var(--color_text);
+}
+
+.submitMasseage{
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--color_blue);
+    border-radius: .3rem;
+    -webkit-border-radius: .3rem;
+    -moz-border-radius: .3rem;
+    -ms-border-radius: .3rem;
+    -o-border-radius: .3rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.mainChat_content{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-y: auto;
+    padding-bottom: 10rem;
+}
+.pepoleMasseage{
+    margin:.5rem 0;
+    max-width: 350px;
+}
+.pepoleMasseage span {
+    color: var(--color_text);
+}
+.pepoleMasseage p {
+    background-color:var(--color_chat) ;
+    border-radius: .7rem .7rem .7rem 0;
+    -webkit-border-radius: .7rem .7rem .7rem 0;
+    -moz-border-radius: .7rem .7rem .7rem 0;
+    -ms-border-radius: .7rem .7rem .7rem 0;
+    -o-border-radius: .7rem .7rem .7rem 0;
+    padding: .5rem;
+    margin:  .5rem 0;   
+    font-weight: 600;
+}
+.adminsMasseage{
+    direction: rtl;
+    margin-top: 2rem;
+}
+.adminsMasseage p {
+    max-width: 350px;
+    direction: ltr;
+    background-color: var(--color_blue);
+    padding: .5rem;
+    border-radius: .7rem .7rem 0 .7rem;
+    -webkit-border-radius: .7rem .7rem 0 .7rem;
+    -moz-border-radius: .7rem .7rem 0 .7rem;
+    -ms-border-radius: .7rem .7rem 0 .7rem;
+    -o-border-radius: .7rem .7rem 0 .7rem;
+    margin-bottom: .5rem;
+    color: aliceblue;
+    font-weight: 600;
+}
+.adminsMasseage span {
+    color: var(--color_text);
+}
+
+.boxSwitchMainContent{
+     width: 3rem;
+     height: 3.5rem;
+     position: absolute;
+     background-color: red;
+     z-index: 500;
+     right: -10rem;
+     top: 10%;
+     border-radius:0 2rem  2rem 0;
+     -webkit-border-radius:0 2rem  2rem 0;
+     -moz-border-radius:0 2rem  2rem 0;
+     -ms-border-radius:0 2rem  2rem 0;
+     -o-border-radius:0 2rem  2rem 0;
+     cursor: pointer;
+     display: none;
+}
+.linerDark{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+    z-index: 110;
+    display: none;
+}
