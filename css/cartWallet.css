@@ -230,6 +230,7 @@ margin-bottom: .5rem;
     -ms-border-radius: .7rem;
     -o-border-radius: .7rem;
     padding: .5rem;
+    margin-top: .5rem;
 }
 .header_row-box__footerWallet{
  display: flex;margin:.7rem 0;
