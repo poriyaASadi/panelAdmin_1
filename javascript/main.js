@@ -31,7 +31,30 @@ window.addEventListener('load' , () => {
             link.href = './css/darkMode.css';
             $.head.appendChild(link);
   }
+//   ----------- canvas for window mouse 
+
 })
+
+//  ctx.clearRect(e.clientX,e.clientY,10,10)
+ window.addEventListener('mousemove' , (e) => {
+    creatCanvas(e.clientX,e.clientY);
+ })
+ function creatCanvas (X,Y) {
+    const mycanvas = document.querySelector('canvas');
+    const ctx = mycanvas.getContext('2d');
+    mycanvas.width = window.innerWidth;
+    mycanvas.height = window.innerHeight;
+    // ctx.lineJoin = 'round';
+    //  ctx.strokeStyle = 'blue';
+    ctx.shadowColor = 'blue';
+    ctx.shadowBlur = 10;
+    // ctx.strokeRect(X,Y,10,10);
+    ctx.beginPath();
+    ctx.fillStyle = 'blue'
+    ctx.arc(X,Y, 5, 0, 2 * Math.PI);
+    ctx.fill();
+ }
+
 search_header.addEventListener('keyup' , (e) => {
     let resultInput = e.target.value
    resultSearchInput.style.cssText = 'display:inline !important;'

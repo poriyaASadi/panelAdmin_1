@@ -1,4 +1,4 @@
-:root[data-theme="dark"] body , .iconBask_frame, .right_box_portfolio svg rect  {
+:root[data-theme="dark"] body , .iconBask_frame, .right_box_portfolio svg rect  , .row_footer-box__wallet {
     background-color: var(--color_gray) !important;
     fill: var(--color_gray) !important;
     }
@@ -13,12 +13,15 @@
       fill: var(--color_white) !important;
       color: var(--color_white) !important;
     }
-    :root[data-theme="dark"] .select_leftChart , .styleChart_left , .list_styletime_leftChart ul li{
+    :root[data-theme="dark"] .select_leftChart , .styleChart_left , .list_styletime_leftChart ul li  {
       border-color: var( --color_dark_gray) !important; 
     }
-    :root[data-theme="dark"] .selectBox_header , .boxTable_channels > table thead tr th ,  .boxTable_sale ,  .cart-report1 ,  .cart-report2 , .cart-report3 , .cart-report4 , .cart_detailse , .chartLarg { 
+    :root[data-theme="dark"] .selectBox_header , .boxTable_channels > table thead tr th ,  .boxTable_sale ,  .cart-report1 ,  .cart-report2 , .cart-report3 , .cart-report4 , .cart_detailse , .chartLarg
+    , .box_table-Invoices , .box_sale-portalHeader , .box_sale-portalHeader > * , .box_sale-portalHeader p , .box_sale-portalHeader span ,  .right-row_Invoices p  , .box_PaymentMethod-header , .head_box-pyment h5 , .card p
+    , .left_footer-wallet , .right_footer-wallet  { 
       background-color: var(--color_black);
       color: var(--color_white);
+      /* ----------------------------------------------------------------------- */
     }
     :root[data-theme="dark"] .boxTable_sale table tbody tr td , .boxTable_sale > table thead tr th , 
     .boxTable_sale > h2 , .boxTable_sale {
@@ -26,7 +29,7 @@
     }
 
     :root[data-theme="dark"] .contentBox , .boxSearch_contentChat , .boxSearch_contentChat input::placeholder , .boxSearch_contentChat input ,
-    .title_content svg , .box_massiges , .box_massiges input {
+    .title_content svg , .box_massiges , .box_massiges input , .row_footer-box__wallet p span{
       background-color: var(--color_black) !important;
       color: var(--color_white);
     }

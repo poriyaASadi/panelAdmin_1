@@ -5,7 +5,6 @@
   text-decoration: none;
   list-style: none;
 }
-
 body {
   font-family: "Ralwey_light";
   overflow-x: hidden;
@@ -48,8 +47,6 @@ body {
   --color_chat :  rgba(239, 244, 251, 1);
 }
 /* color dark */
-
-
 /* date-thme="dark" */
 /* مثل شرط هست  */
 @media (max-width:600px) {
@@ -105,7 +102,7 @@ gap: .3rem !important;
 .container_main{
   gap: 0;
 }
-.boxHeader_wallet{
+.boxHeader_wallet  {
   display: block;
 }
 .box_PaymentMethod-header{
@@ -118,6 +115,17 @@ gap: .3rem !important;
 .box_table-Invoices{
 max-width: 50rem;
 margin: auto;
+}
+.boxFooter_wallet{
+  display: block;
+  max-width: 50rem;
+  margin: auto;
+}
+.boxFooter_wallet  .left_footer-wallet,
+.boxFooter_wallet .right_footer-wallet {
+  margin: auto;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 }
 @media (max-width:999px) {
@@ -150,8 +158,6 @@ margin: auto;
     display: flex;
   }
 }
-
-
 /* width */
 ::-webkit-scrollbar {
   width: 1px !important;
@@ -211,4 +217,9 @@ margin: auto;
    -moz-transition:opacity .3s ease-in ;
    -ms-transition:opacity .3s ease-in ;
    -o-transition:opacity .3s ease-in ;
+}
+canvas {
+  /* z-index: 100; */
+   clip-path: none; 
+  height: 100cqmin;
 }
