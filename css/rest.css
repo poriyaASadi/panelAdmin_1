@@ -221,5 +221,5 @@ margin: auto;
 canvas {
   /* z-index: 100; */
    clip-path: none; 
-  height: 100cqmin;
+  height: 100vh;
 }

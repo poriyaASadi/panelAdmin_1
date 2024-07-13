@@ -5,9 +5,7 @@ const search_header = $.querySelector('.search_header input');
 // btn_menu_mobile 
 const btn_menu_mobile = $.querySelector('.btn_menu_mobile');
 const listMobile = $.querySelector('.listMobile');
-// swith_them_menu 
-const swith_them_menu = $.querySelectorAll('.swith_them_menu span');
-// ulMain_opration li child 
+
 const ulMain_opration = $.querySelectorAll('.ulMain_opration li')
 // ul main opration end
 // text many for switch show or hidden 
@@ -18,25 +16,9 @@ const titleicon_leftMain = $.querySelector('.icon_switchMainleft_value');
 const box_item_header_title = $.querySelector('.box_item_header_title');
 
 
-window.addEventListener('load' , () => {
-  let cookisTheme =decodeURIComponent(document.cookie);
-  const cArray = cookisTheme.split(";");
-  let resultCookis  =null
-  cArray.forEach(cookis => {
-   resultCookis =  cookis.substring('theme'.length + 1);
-  })
-  if (resultCookis === 'Dark') {
-    const link = $.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = './css/darkMode.css';
-            $.head.appendChild(link);
-  }
-//   ----------- canvas for window mouse 
-
-})
-
 //  ctx.clearRect(e.clientX,e.clientY,10,10)
- window.addEventListener('mousemove' , (e) => {
+
+ $.documentElement.addEventListener('mousemove' , (e) => {
     creatCanvas(e.clientX,e.clientY);
  })
  function creatCanvas (X,Y) {
@@ -85,26 +67,7 @@ window.addEventListener('resize' , () => {
     }
 })
 
-// for thame project code ... 
-swith_them_menu.forEach(item => {
-    item.addEventListener('click' , () => {
-        // console.log(item.textContent.trim());
-        if (item.textContent.trim() === 'Dark') {
-            const link = $.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = './css/darkMode.css';
-            $.head.appendChild(link)
-        }else {
-            const links  = $.getElementsByTagName('link')
-             links[3].parentNode.removeChild(links[3]);
-        };
 
-        const data = new Date();
-        data.setTime(data.getTime() + (5 * 24 * 60 * 60 * 1000));
-        let Expirse = "expires=" + data.toUTCString();
-        document.cookie = `theme=${item.textContent.trim()};path=/;${Expirse}`;
-    });
-});
 // start code for  chart left main 
 let elmentChart = document.querySelector("#chart");
 if (elmentChart) {
