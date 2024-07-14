@@ -40,7 +40,7 @@ body {
   --color_light_gray: rgb(248, 248, 248);
   --color_dark_gray: rgb(49, 53, 63);
   --color_light_purple: rgb(140, 119, 237);
-  --color_blue: rgb(58, 111, 248);
+  --color_blue: #3a6ff8;
   --color_green: rgb(30, 203, 79);
   --color_light_red: rgb(244, 109, 34);
   --color_text: rgba(173, 173, 173, 1);

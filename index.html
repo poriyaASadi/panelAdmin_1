@@ -533,8 +533,25 @@
       </div>
    </main>
     <!-- script project -->
+     <script>
+        window.addEventListener('load' , () => {
+            Swal.fire({
+  title: 'Welcome',
+  text: 'Do you want to continue',
+  icon: 'question',
+  confirmButtonColor: "#3a6ff8",
+  buttonsStyling : 'false',
+  animation : 'true',
+  width:'50%',
+  background: '#333',
+  color: '#fff',
+  confirmButtonText: 'Tankes'
+})
+        })
+     </script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="./javascript/main.js"></script>
     <script src="./javascript/componentHeader.js"></script>
+    <script src="./javascript/vander/sweetAlert/sweetalert2@11.js"></script>
 </body>
 </html>
