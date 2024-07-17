@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		#mic {
+			background-color: red;
+			width: 10rem;
+			height: 10rem;color: aliceblue;
+		}
+	</style>
+</head>
+<body>
+	
+
+	<div class="mic-toggle" id="mic" >
+		<span class="icons">mic</span>
+	</div>
+
+	<audio class="autioRecorder" controls></audio>
+<script>
+
+	const mic_btn = document.querySelector('#mic');
+	const playBack = document.querySelector('.autioRecorder');
+
+	 mic_btn.addEventListener('click' , toggleMic);
+
+	let can_recorder = false;
+	let is_recording = false;
+
+	let recorder = null ;
+	let chunks = [];
+
+	function SetupAudio () {
+		console.log('setUp :)');
+		if (navigator.mediaDevices && navigator.mediaDevices.getDisplayMedia) {
+			navigator.mediaDevices
+			.getUserMedia({
+				audio : true
+			})
+			.then(setupStream)
+			.catch(err => console.error(err));
+		}
+	}
+	SetupAudio()
+
+	function setupStream (stream) {
+		recorder = new MediaRecorder(stream);
+
+		recorder.ondataavailable = e => {
+			console.log(e.data);
+			chunks.push(e.data);
+		}
+
+		recorder.onstop = e => {
+			const blob = new Blob(chunks , {type : "audio/ogg; codecs=opus"});
+			chunks = [];
+			const audioUrl = window.URL.createObjectURL(blob);
+			console.log(audioUrl);
+			playBack.src = audioUrl
+		}
+
+		can_recorder = true;
+	}
+	console.log(can_recorder);
+	function toggleMic () {
+		if (!can_recorder) return;
+
+		is_recording = !is_recording;
+
+		if (is_recording) {
+		recorder.start();	
+		}else {
+			recorder.stop();
+		}
+	}
+</script>
+</body>
+</html>
