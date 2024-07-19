@@ -14,10 +14,13 @@ const titleicon_leftMain = $.querySelector('.icon_switchMainleft_value');
 // text many finish
 // box_item_header_title 
 const box_item_header_title = $.querySelector('.box_item_header_title');
+
+
+
 document.addEventListener('readystatechange', () => {
-    console.log('f');
 })
 window.addEventListener('DOMContentLoaded' , () => {
+    document.designMode = 'off';
     // clint js libres
     var client = new ClientJS(); // Create A New Client Object
     var browser = client.getBrowser(); 
@@ -44,6 +47,9 @@ window.addEventListener('DOMContentLoaded' , () => {
         window.location = 'https://www.google.com'
     }
 })
+
+
+
 
  $.documentElement.addEventListener('mousemove' , (e) => {
     creatCanvas(e.clientX,e.clientY);
