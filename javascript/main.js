@@ -19,37 +19,34 @@ const box_item_header_title = $.querySelector('.box_item_header_title');
 
 document.addEventListener('readystatechange', () => {
 })
-window.addEventListener('DOMContentLoaded' , () => {
-    document.designMode = 'off';
-    // clint js libres
-    var client = new ClientJS(); // Create A New Client Object
-    var browser = client.getBrowser(); 
-    if (browser ===  'Chrome') {
-        if  (window.location.pathname.includes('index.html')){
-            swalfunc('Welcome','your Browser is Chrome','question','#333','#fff');
-        }
-        // genarytor function sweet alert 2
-        function swalfunc (title,text,icon,background,color) {
-            Swal.fire({
-                title:title,
-                text: text,
-                icon: icon,
-                confirmButtonColor: "#3a6ff8",
-                buttonsStyling : 'false',
-                animation : 'true',
-                width:'50%',
-                background: background,
-                color:color,
-                confirmButtonText: 'Tankes'
-                })
-        }
-    }else {
-        window.location = 'https://www.google.com'
-    }
-})
-
-
-
+// window.addEventListener('DOMContentLoaded' , () => {
+//     document.designMode = 'off';
+//     // clint js libres
+//     var client = new ClientJS(); // Create A New Client Object
+//     var browser = client.getBrowser(); 
+//     if (browser ===  'Chrome') {
+//         if  (window.location.pathname.includes('index.html')){
+//             swalfunc('Welcome','your Browser is Chrome','question','#333','#fff');
+//         }
+//         // genarytor function sweet alert 2
+//         function swalfunc (title,text,icon,background,color) {
+//             Swal.fire({
+//                 title:title,
+//                 text: text,
+//                 icon: icon,
+//                 confirmButtonColor: "#3a6ff8",
+//                 buttonsStyling : 'false',
+//                 animation : 'true',
+//                 width:'50%',
+//                 background: background,
+//                 color:color,
+//                 confirmButtonText: 'Tankes'
+//                 })
+//         }
+//     }else {
+//         window.location = 'https://www.google.com'
+//     }
+// })
 
  $.documentElement.addEventListener('mousemove' , (e) => {
     creatCanvas(e.clientX,e.clientY);
@@ -63,11 +60,11 @@ window.addEventListener('DOMContentLoaded' , () => {
     //  ctx.strokeStyle = 'blue';
     ctx.shadowColor = 'blue';
     ctx.shadowBlur = 10;
-    // ctx.strokeRect(X,Y,10,10);
-    ctx.beginPath();
+     ctx.strokeRect(X,Y,10,10);
     ctx.fillStyle = 'blue'
     ctx.arc(X,Y, 5, 0, 2 * Math.PI);
     ctx.fill();
+    ctx.beginPath();
  }
 
 search_header.addEventListener('keyup' , (e) => {

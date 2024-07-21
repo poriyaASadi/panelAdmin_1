@@ -24,7 +24,7 @@
       /* ----------------------------------------------------------------------- */
     }
     :root[data-theme="dark"] .boxTable_sale table tbody tr td , .boxTable_sale > table thead tr th , 
-    .boxTable_sale > h2 , .boxTable_sale {
+    .boxTable_sale > h2 , .boxTable_sale , .boxSearch_contentChat {
       border: none !important;
     }
 
