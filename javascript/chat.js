@@ -31,19 +31,25 @@ inputChatMassieg.addEventListener('keyup' , (event) => {
   if (event.keyCode === 13) {genarytorMasseig(ValueMassigaUser)} 
 })
 submitMasseage.addEventListener('click' , () => {
-  genarytorMasseig(inputChatMassieg.value);
+  if (inputChatMassieg.value) {
+    genarytorMasseig(inputChatMassieg.value);
+  }else {
+    inputChatMassieg.focus()
+  }
 })
 
-function genarytorMasseig (massaege,user) {
+function genarytorMasseig (massaege,audio) {
   let newDateForMasseage = new Date();
   let time = `${newDateForMasseage.getHours()} : ${newDateForMasseage.getMinutes()}`;
   mainChat_content.insertAdjacentHTML('beforeend' , `
     <div class="pepoleMasseage">
             <span>Andri Thomas</span>
-            <p>${massaege.trim()}</p>
+            <p>${massaege.trim() ? massaege.trim() : ''}</p>
+        	${audio ? '<audio src="${audio}" class="autioRecorder"controls></audio>' : ''}
           <span>${time}</span>      
         </div>
-`)
+`);
+ inputChatMassieg.value = ''
 }
 
 voiceMasseage.addEventListener('click' , togleVoice)
@@ -51,7 +57,7 @@ let can_recorder = false;
 let is_recording = false;
 let recorder = null;
 let chunks = [];
-
+let tagAudio = null
 function SetupAudio () {
   console.log('setUp :)');
   if (navigator.mediaDevices && navigator.mediaDevices.getDisplayMedia) {
@@ -75,14 +81,15 @@ function setupStream (stream) {
     const blob = new Blob(chunks , {type : "audio/ogg; codecs=opus"});
     chunks = [];
     const audioUrl = window.URL.createObjectURL(blob);
-    console.log(audioUrl);
-    playBack.src = audioUrl
+    // tagAudio.src = audioUrl
+    // console.log(tagAudio);
+    genarytorMasseig('' , audioUrl);
   }
   can_recorder = true;
 }
 function togleVoice  () {
   if (!can_recorder) return;
-  
+
   is_recording = !is_recording;
 
   if (is_recording) {

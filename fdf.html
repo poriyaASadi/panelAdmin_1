@@ -57,7 +57,7 @@
 			const blob = new Blob(chunks , {type : "audio/ogg; codecs=opus"});
 			chunks = [];
 			const audioUrl = window.URL.createObjectURL(blob);
-			console.log(audioUrl);
+			let tagAudio = document.createElement('audio');
 			playBack.src = audioUrl
 		}
 
