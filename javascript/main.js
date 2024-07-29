@@ -15,58 +15,61 @@ const titleicon_leftMain = $.querySelector('.icon_switchMainleft_value');
 // box_item_header_title 
 const box_item_header_title = $.querySelector('.box_item_header_title');
 
-
-
-document.addEventListener('readystatechange', () => {
-})
-// window.addEventListener('DOMContentLoaded' , () => {
-//     document.designMode = 'off';
-//     // clint js libres
-//     var client = new ClientJS(); // Create A New Client Object
-//     var browser = client.getBrowser(); 
-//     if (browser ===  'Chrome') {
-//         if  (window.location.pathname.includes('index.html')){
-//             swalfunc('Welcome','your Browser is Chrome','question','#333','#fff');
-//         }
-//         // genarytor function sweet alert 2
-//         function swalfunc (title,text,icon,background,color) {
-//             Swal.fire({
-//                 title:title,
-//                 text: text,
-//                 icon: icon,
-//                 confirmButtonColor: "#3a6ff8",
-//                 buttonsStyling : 'false',
-//                 animation : 'true',
-//                 width:'50%',
-//                 background: background,
-//                 color:color,
-//                 confirmButtonText: 'Tankes'
-//                 })
-//         }
-//     }else {
-//         window.location = 'https://www.google.com'
-//     }
+// document.addEventListener('readystatechange', () => {
 // })
+window.addEventListener('DOMContentLoaded' , () => {
+    document.designMode = 'off';
+    if (window.location.pathname == 'index.html'){
+    // clint js libres
+    var client = new ClientJS(); // Create A New Client Object
+    var browser = client.getBrowser(); 
+    if (browser ===  'Chrome' || browser === 'Firefox') {
+        if  (window.location.pathname.includes('index.html')){
+            swalfunc('Welcome',`your Browser is ${browser}`,'info','#333','#fff');
+        }
+        // genarytor function sweet alert 2
+        function swalfunc (title,text,icon,background,color) {
+            Swal.fire({
+                title:title,
+                text: text,
+                icon: icon,
+                confirmButtonColor: "#3a6ff8",
+                buttonsStyling : 'false',
+                animation : 'true',
+                width:'50%',
+                background: background,
+                color:color,
+                confirmButtonText: 'Tankes'
+                })
+        }
+    }else {
+    window.location = 'https://github.com/poriyaASadi/'
+    }
+    }
 
- $.documentElement.addEventListener('mousemove' , (e) => {
-    creatCanvas(e.clientX,e.clientY);
- })
- function creatCanvas (X,Y) {
-    const mycanvas = document.querySelector('canvas');
-    const ctx = mycanvas.getContext('2d');
-    mycanvas.width = window.innerWidth;
-    mycanvas.height = window.innerHeight;
-    // ctx.lineJoin = 'round';
-    //  ctx.strokeStyle = 'blue';
-    ctx.shadowColor = 'blue';
-    ctx.shadowBlur = 10;
-     ctx.strokeRect(X,Y,10,10);
-    ctx.fillStyle = 'blue'
-    ctx.arc(X,Y, 5, 0, 2 * Math.PI);
-    ctx.fill();
-    ctx.beginPath();
+})
+ window.onload = () => {
+    if (window.innerWidth > 1100) {
+        $.documentElement.addEventListener('mousemove' , (e) => {
+            creatCanvas(e.clientX,e.clientY);
+         })
+         function creatCanvas (X,Y) {
+            const mycanvas = document.querySelector('canvas');
+            const ctx = mycanvas.getContext('2d');
+            mycanvas.width = window.innerWidth;
+            mycanvas.height = window.innerHeight;
+            // ctx.lineJoin = 'round';
+            //  ctx.strokeStyle = 'blue';
+            ctx.shadowColor = 'blue';
+            ctx.shadowBlur = 10;
+             ctx.strokeRect(X,Y,10,10);
+            ctx.fillStyle = 'blue'
+            ctx.arc(X,Y, 5, 0, 2 * Math.PI);
+            ctx.fill();
+            ctx.beginPath();
+         }
+    }
  }
-
 search_header.addEventListener('keyup' , (e) => {
     let resultInput = e.target.value
    resultSearchInput.style.cssText = 'display:inline !important;'
@@ -96,8 +99,6 @@ window.addEventListener('resize' , () => {
         listMobile.style.cssText = 'display:none;'
     }
 })
-
-
 // start code for  chart left main 
 let elmentChart = document.querySelector("#chart");
 if (elmentChart) {

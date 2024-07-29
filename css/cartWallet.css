@@ -1,3 +1,6 @@
+main {
+    position: relative;
+}
 .boxHeader_wallet {
     display: flex;
     padding: .5rem;
@@ -298,3 +301,4 @@ color: var(--color_text);
 .active_color-forGreen  .left_value-footerWallet span{
  color: green ;
 }
+

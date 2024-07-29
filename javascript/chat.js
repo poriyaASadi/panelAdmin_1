@@ -25,7 +25,7 @@ window.addEventListener('load' , () => {
     let mainChat_content = document.querySelector('.mainChat_content');
     mainChat_content.scrollTo(0,mainChat_content.scrollHeight);
 })
-
+ 
 inputChatMassieg.addEventListener('keyup' , (event) => {
   let ValueMassigaUser = event.target.value;
   if (event.keyCode === 13) {genarytorMasseig(ValueMassigaUser)} 
@@ -35,9 +35,8 @@ submitMasseage.addEventListener('click' , () => {
     genarytorMasseig(inputChatMassieg.value);
   }else {
     inputChatMassieg.focus()
-  }
-})
-
+  };
+});
 function genarytorMasseig (massaege,audio) {
   let newDateForMasseage = new Date();
   let time = `${newDateForMasseage.getHours()} : ${newDateForMasseage.getMinutes()}`;
@@ -45,7 +44,7 @@ function genarytorMasseig (massaege,audio) {
     <div class="pepoleMasseage">
             <span>Andri Thomas</span>
             <p>${massaege.trim() ? massaege.trim() : ''}</p>
-        	${audio ? '<audio src="${audio}" class="autioRecorder"controls></audio>' : ''}
+        	${audio ? `<audio src="${audio}" class="autioRecorder"controls></audio>` : ''}
           <span>${time}</span>      
         </div>
 `);

@@ -265,5 +265,4 @@ const editorConfig = {
 		contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells', 'tableProperties', 'tableCellProperties']
 	}
 };
-
 ClassicEditor.create(document.querySelector('#editor'), editorConfig);
