@@ -18,7 +18,7 @@ const box_item_header_title = $.querySelector('.box_item_header_title');
 // document.addEventListener('readystatechange', () => {
 // })
 window.addEventListener('DOMContentLoaded' , () => {
-    document.designMode = 'off';
+
     if (window.location.pathname == 'index.html'){
     // clint js libres
     var client = new ClientJS(); // Create A New Client Object

@@ -9,7 +9,7 @@
       color: var(--color_white) !important;
     }
     :root[data-theme="dark"]  .itemMenu ul li a, .search_header input  , .btn_menu_mobile svg , .logo_header , .titleValue_leftMain span , .titleValue_leftMain h2 , .span_title_frame_head ,
-    .box_item_header_title span {
+    .box_item_header_title span , .closeBox svg  , .titleFormCreat h2 {
       fill: var(--color_white) !important;
       color: var(--color_white) !important;
     }
@@ -29,7 +29,7 @@
     }
 
     :root[data-theme="dark"] .contentBox , .boxSearch_contentChat , .boxSearch_contentChat input::placeholder , .boxSearch_contentChat input ,
-    .title_content svg , .box_massiges , .box_massiges input , .row_footer-box__wallet p span{
+    .title_content svg , .box_massiges , .box_massiges input , .row_footer-box__wallet p span , .FormNewCards{
       background-color: var(--color_black) !important;
       color: var(--color_white);
     }

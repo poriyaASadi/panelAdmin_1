@@ -5,10 +5,11 @@ const swith_them_menu = $.querySelectorAll('.swith_them_menu span');
 window.addEventListener('load' , () => {
    let cookisTheme =decodeURIComponent(document.cookie);
    const cArray = cookisTheme.split(";");
-   let resultCookis  =null
+   let resultCookis  = null
    cArray.forEach(cookis => {
-    resultCookis =  cookis.substring('theme'.length + 1);
+    resultCookis =  cookis.substring('theme'.length + 2);
    })
+
    if (resultCookis === 'Dark') {
      const link = $.createElement('link');
              link.rel = 'stylesheet';
@@ -145,6 +146,7 @@ class asideBar extends HTMLElement {
    }
 }
 window.customElements.define('asidee-elm' , asideBar);
+
 function switchBTNELMENT (event) {
 event.target.addEventListener('click' , () => {
     console.log(event.target.textContent.trim());
