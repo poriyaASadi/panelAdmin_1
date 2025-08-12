@@ -1,0 +1,62 @@
+@media (max-width:1200px){
+    .operation_section{
+        padding: 10px;
+    }
+}
+@media (max-width:999px){
+    body{
+        grid-template-areas:"header header""main main";
+    }
+    aside,.title_header,header .search_box_header,.full_name_user span:first-child{
+        display: none;
+    }
+    header{
+        padding: 8px;
+    }
+    header .user_action{
+        gap: 1.5rem;
+    }
+    aside{
+        width: 68%;
+        z-index: 999;
+        background-color: var(--color_white);
+    }
+    .container_main{
+        grid-template-columns: repeat(1,1fr);   
+    }
+    .message_list_user{
+        right: 55px;
+    }
+    .sidbar_chat{
+        display: none;
+    }
+    .message_chat{
+        width: 100%;
+    }
+    .first_row_wallet,.seconde_row_wallet{
+        flex-wrap: wrap;
+    }
+    .wallet_cards ,.wallet_invoices,.wallet_billing ,.wallet_transaction{
+        width: 100%;
+    }
+}
+@media (max-width:400px){
+    
+    .graph_data {
+        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    }
+}
+@media (max-width:566px){
+    
+   .wallet_cards_row,.payment_method_cards{
+    flex-wrap: wrap;
+   }
+   .wallet_cards_bank,.wallet_card_balance,.payment_method_carditem{
+    width: 100%;
+   }
+}
+@media (min-width:1000px){
+    .burger_menu,main .search_box_header{
+        display: none;
+    }
+}
